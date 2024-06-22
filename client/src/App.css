@@ -1,0 +1,521 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: 'TT Bluescreens';
+    src: url('./fonts/TT Bluescreens.woff.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:white;
+    letter-spacing: -0.5px;
+  }
+
+.main-content{
+    margin: 80px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.item .item-content{
+    margin: 25px 0;
+}
+  
+  header {
+    padding: 20px;
+    margin: 8px 20px;
+  }
+
+  h1, .other-items-title, .modal-title {
+    font-size: 70px;
+    font-family: TT Bluescreens;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    margin: 45px 0px;
+  }
+
+h2 {
+  color: black;
+}
+
+  h3{
+
+    font-size: 30px;
+  }
+
+  .btn-def {
+    background-color: #0015D3;
+    display: inline-block;
+    border-radius: 100px;
+    color: white;
+    padding: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .btn-def:hover{
+    background-color: #2F43F7;
+    transition: 300ms;
+  }
+
+  .btn-secondary {
+    background-color: #ECE6FF;
+    display: inline-block;
+    border-radius: 100px;
+    color: #0015D3;
+    padding: 16px 32px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .btn-secondary:hover {
+    background-color: #E2DAFB;
+    transition: 300ms;
+  }
+  
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+.text-link{
+    color: #A392BF;
+}
+
+.text-link:hover {
+    color: #0015D3;
+    transition: 300ms;
+  }
+
+
+  
+  
+  button {
+    all:unset
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  
+  .nav-items {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .profile-button,
+  .cart-button,
+  .logout-button {
+    width: 36px;
+  }
+
+  
+  .balance {
+    font-family: TT Bluescreens;
+    font-size: 45px;
+  }
+
+  .balance::after{
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('./icons/ux/point-coin.svg') no-repeat center center;
+    background-size: contain;
+    margin-left: 8px;
+  }
+  .hero-pic{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    border-radius: 40px;
+    margin-bottom: 60px;
+  }
+
+  .hero-pic img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Menu styles */
+  .menu-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+
+.menu-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search {
+    width: 25%;
+}
+
+.item-picture-small-container {
+    overflow: hidden;
+    position: relative;
+    border-radius: 50px;
+}
+
+.item-picture-small {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.item-picture-small-container:hover img{
+    transform: scale(1.1);
+
+}
+
+.item-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.item-name {
+    font-size: 20px;
+    font-weight: bold;
+    max-width: 50%;
+}
+
+.price {
+    font-family: TT Bluescreens;
+    font-size: 45px;
+}
+
+
+.price::after{
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('./icons/ux/point-coin.svg') no-repeat center center;
+    background-size: contain;
+    margin-left: 8px;
+}
+
+
+.price-small {
+    font-family: TT Bluescreens;
+    font-size: 24px;
+}
+
+
+.price-small::after{
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('./icons/ux/point-coin.svg') no-repeat center center;
+    background-size: contain;
+    margin-left: 8px;
+}
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333333;
+  }
+  
+
+.item-layout {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 24px;
+  }
+
+.order-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .order-card{
+    outline: 1px solid #ECE6FF;
+    padding: 40px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 450px;
+  }
+
+  .subscript{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-weight: bold;
+    font-size: 24px;
+    
+  }
+
+  .status-received {
+    max-width: 100px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+    color: #0015D3;
+    background-color: #F2EEFF;
+    border-radius: 30px;
+    padding: 16px 40px;
+  }
+  .status-done {
+    max-width: 100px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+    color: #40622B;
+    background-color: #EFF8EA;
+    border-radius: 30px;
+    padding: 16px 40px;
+  }
+
+  .order-info {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .order-items, .cart-items{
+    list-style-type: none;
+  }
+
+  .order-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .order-items-names {
+    font-size: 20px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .quantity-control {
+    display: flex;
+    gap: 8px;
+    font-size: 16px;
+    align-items: center;
+  }
+
+  .quantity-btn {
+    background-color: #ECE6FF;
+    display: inline-block;
+    border-radius: 100px;
+    color: #0015D3;
+    padding: 8px 8px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .quantity-btn:hover {
+    background-color: #E2DAFB;
+    transition: 300ms;
+  }
+
+  .cart-items-wrapper {
+    display: flex;
+    gap: 8px;
+  }
+
+  .cart-item {
+    display: flex;
+    gap: 20px;
+    max-width: 450px;
+    max-height: 150px;
+  }
+
+  .cart-item > img {
+    width: 150px;
+    border-radius: 30px;
+  }
+
+  .itm-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-self: center;
+  }
+
+  .cart {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 450px;
+  }
+
+  .input {
+    background-color: #F9F7FF;
+    border-radius: 15px;
+    padding: 20px;
+  }
+
+  input{
+    all: unset;
+  }
+
+  ::placeholder{
+    color: #A392BF;
+  }
+
+  .cart-empty {
+    font-size: 24px;
+    color: #A392BF
+  }
+
+  .error-message {
+    color: #FF3737;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-self: center;
+    max-width: 450px;
+    box-sizing: border-box;
+}
+
+.form > h1 {
+    text-align: center;
+}
+
+.form > p {
+    text-align: center;
+}
+
+/* Стили страницы айтема */
+
+.item-image {
+    border-radius: 50px;
+    width: 45%;
+}
+
+.item-details {
+    display: flex;
+    gap: 32px;
+}
+
+.item-info{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.item-name-big{
+    font-size: 36px;
+    letter-spacing: -1px;
+}
+
+.item-key {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-description {
+    color: #A392BF;
+    font-size: 18px;
+}
+
+.item-content-big {
+    display: flex;
+    gap: 12px;
+}
+
+.item-page-section {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.recoms {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.load-more {
+    background-color: none;
+    outline: 1px solid #0015D3;
+    color: #0015D3;
+    display: inline-block;
+    border-radius: 100px;
+    padding: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.load-more:hover {
+    background-color: #0015D3;
+    color: white;
+    transition: 300ms;
+}
+
+.emoji {
+    font-size: 24px;
+}
